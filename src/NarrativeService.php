@@ -14,7 +14,7 @@ final class NarrativeService
     /** @var array<string, Publisher> */
     protected array $publishers;
 
-    /** @var array<string, \BetterWorld\Scribe\Contracts\Book> */
+    /** @var array<string, Contracts\Book> */
     protected array $books;
 
     /** @var array<string, Storyline> */
@@ -80,7 +80,7 @@ final class NarrativeService
         return $this->publishers;
     }
 
-    /** @return array<string, \BetterWorld\Scribe\Contracts\Book> */
+    /** @return array<string, Contracts\Book> */
     public function getBooks(): array
     {
         return $this->books;
@@ -91,7 +91,7 @@ final class NarrativeService
         return $this->publishers[$publisher];
     }
 
-    public function getBook(?string $book = null): \BetterWorld\Scribe\Contracts\Book
+    public function getBook(?string $book = null): Contracts\Book
     {
         /** @var string $default */
         $default = array_value($this->config, 'default_book');
