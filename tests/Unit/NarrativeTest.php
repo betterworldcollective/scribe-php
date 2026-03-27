@@ -172,7 +172,6 @@ test('a narrative can generate a values array', function (): void {
         Time::of(\DateTime::createFromFormat(TIME_FORMAT, '05:25:50')),
         Date::of(DateTimeImmutable::createFromFormat(DATE_FORMAT, '2025-07-08')),
         null,
-        null,
     );
 
     expect($narrativeWithNull->values())->toBe([
